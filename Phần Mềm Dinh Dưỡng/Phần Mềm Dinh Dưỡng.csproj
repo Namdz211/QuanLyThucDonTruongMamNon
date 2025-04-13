@@ -220,11 +220,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="user control\KtraDDThucDon.cs">
+    <Compile Include="user control\UC_KtraDDThucDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="user control\KtraDDThucDon.Designer.cs">
-      <DependentUpon>KtraDDThucDon.cs</DependentUpon>
+    <Compile Include="user control\UC_KtraDDThucDon.Designer.cs">
+      <DependentUpon>UC_KtraDDThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="user control\UC_TaoThucDonTheoMau.cs">
       <SubType>UserControl</SubType>
@@ -260,8 +260,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="user control\KtraDDThucDon.resx">
-      <DependentUpon>KtraDDThucDon.cs</DependentUpon>
+    <EmbeddedResource Include="user control\UC_KtraDDThucDon.resx">
+      <DependentUpon>UC_KtraDDThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user control\UC_TaoThucDonTheoMau.resx">
       <DependentUpon>UC_TaoThucDonTheoMau.cs</DependentUpon>
