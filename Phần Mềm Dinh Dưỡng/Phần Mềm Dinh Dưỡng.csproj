@@ -175,6 +175,11 @@
     <Compile Include="chon_MonAn_Result.cs">
       <DependentUpon>MonAnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DanhMucNguyenLieuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DanhMucNguyenLieuDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,11 +225,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user control\UC_DanhMucNguyenLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\UC_DanhMucNguyenLieu.Designer.cs">
+      <DependentUpon>UC_DanhMucNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="user control\UC_KtraDDThucDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="user control\UC_KtraDDThucDon.Designer.cs">
       <DependentUpon>UC_KtraDDThucDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user control\UC_QuanLyKhoLuongThuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user control\UC_QuanLyKhoLuongThuc.Designer.cs">
+      <DependentUpon>UC_QuanLyKhoLuongThuc.cs</DependentUpon>
     </Compile>
     <Compile Include="user control\UC_TaoThucDonTheoMau.cs">
       <SubType>UserControl</SubType>
@@ -260,8 +277,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="user control\UC_DanhMucNguyenLieu.resx">
+      <DependentUpon>UC_DanhMucNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user control\UC_KtraDDThucDon.resx">
       <DependentUpon>UC_KtraDDThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user control\UC_QuanLyKhoLuongThuc.resx">
+      <DependentUpon>UC_QuanLyKhoLuongThuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user control\UC_TaoThucDonTheoMau.resx">
       <DependentUpon>UC_TaoThucDonTheoMau.cs</DependentUpon>
@@ -273,6 +296,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MonAnModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DanhMucNguyenLieuDataSet1.xsc">
+      <DependentUpon>DanhMucNguyenLieuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DanhMucNguyenLieuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DanhMucNguyenLieuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DanhMucNguyenLieuDataSet1.xss">
+      <DependentUpon>DanhMucNguyenLieuDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="MonAnModel.edmx.diagram">
       <DependentUpon>MonAnModel.edmx</DependentUpon>
     </None>

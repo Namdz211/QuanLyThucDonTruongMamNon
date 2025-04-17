@@ -13,14 +13,13 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
 {
     public partial class UC_DanhMucNguyenLieu : UserControl
     {
+        private System.ComponentModel.IContainer components = null;
+        private string connectionString = "Data Source=.;Initial Catalog=DanhMucNguyenLieu;Integrated Security=True;";
         public UC_DanhMucNguyenLieu()
         {
             InitializeComponent();
             LoadData();
         }
-        private System.ComponentModel.IContainer components = null;
-        private string connectionString = "Data Source=.;Initial Catalog=DanhMucNguyenLieu;Integrated Security=True;";
-
 
         protected override void Dispose(bool disposing)
         {
@@ -29,6 +28,11 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void UC_DanhMucNguyenLieu_Load(object sender, EventArgs e)
+        {
+
         }
         private void LoadData()
         {
@@ -54,25 +58,11 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
             }
         }
 
-        private void UC_DanhMucNguyenLieu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Thêm dữ liệu vào 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        // THÊM DỮ LIỆU VÀO
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtTenNl.Text))
+            if (string.IsNullOrWhiteSpace(txtTenNL.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên nguyên liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -99,11 +89,10 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
             }
 
             // Chuyển đổi dữ liệu đầu vào
-            string tenNl = txtTenNl.Text.Trim();
+            string tenNl = txtTenNL.Text.Trim();
             string donVi = txtDonVi.Text.Trim();
             decimal donGia;
             decimal tyLeThaiBo;
-
             // Kiểm tra giá trị hợp lệ
             if (!decimal.TryParse(txtDonGia.Text, out donGia))
             {
@@ -118,7 +107,6 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
             }
 
             string nhomNl = txtNhomNL.Text.Trim();
-
             // Kết nối SQL để thêm dữ liệu
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -151,13 +139,11 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
                         MessageBox.Show("Lỗi kết nối SQL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-
                 }
             }
         }
 
-        // TÌM KIẾM DỰA VÀO NHÓM NGUYÊN LIỆU
-
+        // TÌM KIẾM DỰA VÀO TEXTBOX NHÓM NGUYÊN LIỆU
         private void SearchByNhomNguyenLieu(string nhomNl)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -183,9 +169,14 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
                 }
             }
         }
-        private void btn_Tim(object sender, EventArgs e)
-        {
 
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
             string nhomNl = txtNhomNL.Text.Trim();  // Lấy giá trị từ TextBox tìm kiếm
 
             // Nếu TextBox rỗng, load lại dữ liệu đầy đủ
@@ -199,13 +190,9 @@ namespace Phần_Mềm_Dinh_Dưỡng.user_control
             }
         }
 
-
-        // XÓA NGUYÊN LIỆU
-        
-        
-private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            string tenToXoa = txtTenNl.Text.Trim();  // Lấy giá trị từ TextBox tìm kiếm
+            string tenToXoa = txtTenNL.Text.Trim();  // Lấy giá trị từ TextBox tìm kiếm
 
             if (string.IsNullOrEmpty(tenToXoa))
             {
@@ -249,13 +236,14 @@ private void btnXoa_Click(object sender, EventArgs e)
                     {
                         MessageBox.Show("Lỗi kết nối SQL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
+
+
+
+
+
+
             }
         }
     }
-   
 }
-    
-
-
