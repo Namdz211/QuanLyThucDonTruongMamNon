@@ -32,6 +32,8 @@ namespace Phần_Mềm_Dinh_Dưỡng.Form_Quản_Lý_Chung
             db = new MonAnEntities(); // Tạo context mới
             dgvDsMonAn.DataSource = db.chon_MonAn().ToList();
             dgvDsMonAn.Refresh();
+            dgvMonAn.DataSource = db.chon_MonAn().ToList();
+            dgvMonAn.Refresh();
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
@@ -124,6 +126,16 @@ namespace Phần_Mềm_Dinh_Dưỡng.Form_Quản_Lý_Chung
             {
                 MessageBox.Show("Lỗi khi chọn dòng: " + ex.Message);
             }
+        }
+
+        private void dgvDsMonAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

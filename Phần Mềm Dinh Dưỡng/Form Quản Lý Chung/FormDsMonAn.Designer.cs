@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDsMonAn = new System.Windows.Forms.DataGridView();
             this.txtLoaiMonAn = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,21 +42,27 @@
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvMonAn = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsMonAn)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDsMonAn
             // 
             this.dgvDsMonAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDsMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDsMonAn.Location = new System.Drawing.Point(231, 262);
+            this.dgvDsMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDsMonAn.Location = new System.Drawing.Point(0, 0);
             this.dgvDsMonAn.Name = "dgvDsMonAn";
             this.dgvDsMonAn.RowHeadersWidth = 51;
             this.dgvDsMonAn.RowTemplate.Height = 24;
-            this.dgvDsMonAn.Size = new System.Drawing.Size(768, 283);
+            this.dgvDsMonAn.Size = new System.Drawing.Size(769, 283);
             this.dgvDsMonAn.TabIndex = 2;
             this.dgvDsMonAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsMonAn_CellClick_1);
+            this.dgvDsMonAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsMonAn_CellContentClick);
             // 
             // txtLoaiMonAn
             // 
@@ -205,18 +214,84 @@
             this.guna2GroupBox1.TabIndex = 14;
             this.guna2GroupBox1.Text = "Thông tin món ăn";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dgvMonAn);
+            this.panel1.Controls.Add(this.dgvDsMonAn);
+            this.panel1.Location = new System.Drawing.Point(231, 247);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(769, 283);
+            this.panel1.TabIndex = 15;
+            // 
+            // dgvMonAn
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvMonAn.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMonAn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMonAn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMonAn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMonAn.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMonAn.Location = new System.Drawing.Point(0, 0);
+            this.dgvMonAn.Name = "dgvMonAn";
+            this.dgvMonAn.RowHeadersVisible = false;
+            this.dgvMonAn.RowHeadersWidth = 51;
+            this.dgvMonAn.RowTemplate.Height = 24;
+            this.dgvMonAn.Size = new System.Drawing.Size(769, 283);
+            this.dgvMonAn.TabIndex = 3;
+            this.dgvMonAn.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMonAn.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvMonAn.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvMonAn.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvMonAn.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvMonAn.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMonAn.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMonAn.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvMonAn.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMonAn.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMonAn.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvMonAn.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonAn.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvMonAn.ThemeStyle.ReadOnly = false;
+            this.dgvMonAn.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMonAn.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMonAn.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMonAn.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvMonAn.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvMonAn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMonAn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvMonAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            // 
             // FormDsMonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1188, 660);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThemMoi);
-            this.Controls.Add(this.dgvDsMonAn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDsMonAn";
             this.Text = "FormDsMonAn";
@@ -224,6 +299,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsMonAn)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +318,7 @@
         private Guna.UI2.WinForms.Guna2Button btnThoat;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvMonAn;
     }
 }

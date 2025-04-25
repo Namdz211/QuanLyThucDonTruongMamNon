@@ -42,6 +42,13 @@
     <Reference Include="Azure.Identity, Version=1.11.4.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.11.4\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -102,6 +109,7 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.7.5.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -134,6 +142,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -170,6 +179,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="chon_MonAn_Result.cs">
@@ -187,23 +198,42 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DinhDuong.cs" />
+    <Compile Include="DinhDuongNgay.cs" />
+    <Compile Include="Form Quản Lý Chung\FormChonTuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Quản Lý Chung\FormChonTuan.Designer.cs">
+      <DependentUpon>FormChonTuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form Quản Lý Chung\FormDsMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form Quản Lý Chung\FormDsMonAn.Designer.cs">
       <DependentUpon>FormDsMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form Quản Lý Chung\FormKtraDinhDuong.cs">
+    <Compile Include="Form Quản Lý Chung\FormKiemTraDinhDuong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Quản Lý Chung\FormKtraDinhDuong.Designer.cs">
-      <DependentUpon>FormKtraDinhDuong.cs</DependentUpon>
+    <Compile Include="Form Quản Lý Chung\FormKiemTraDinhDuong.Designer.cs">
+      <DependentUpon>FormKiemTraDinhDuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Quản Lý Chung\FormXemThucDonTuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Quản Lý Chung\FormXemThucDonTuan.Designer.cs">
+      <DependentUpon>FormXemThucDonTuan.cs</DependentUpon>
     </Compile>
     <Compile Include="Form Quản Lý Chung\Login Screen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form Quản Lý Chung\Login Screen.Designer.cs">
       <DependentUpon>Login Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKtraDinhDuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKtraDinhDuong.Designer.cs">
+      <DependentUpon>FormKtraDinhDuong.cs</DependentUpon>
     </Compile>
     <Compile Include="MonAn.cs">
       <DependentUpon>MonAnModel.tt</DependentUpon>
@@ -258,15 +288,22 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form Quản Lý Chung\FormChonTuan.resx">
+      <DependentUpon>FormChonTuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form Quản Lý Chung\FormDsMonAn.resx">
       <DependentUpon>FormDsMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Quản Lý Chung\FormKtraDinhDuong.resx">
-      <DependentUpon>FormKtraDinhDuong.cs</DependentUpon>
+    <EmbeddedResource Include="Form Quản Lý Chung\FormKiemTraDinhDuong.resx">
+      <DependentUpon>FormKiemTraDinhDuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Quản Lý Chung\FormXemThucDonTuan.resx">
+      <DependentUpon>FormXemThucDonTuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Quản Lý Chung\Login Screen.resx">
       <DependentUpon>Login Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

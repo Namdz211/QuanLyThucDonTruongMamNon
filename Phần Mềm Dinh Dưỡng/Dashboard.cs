@@ -31,6 +31,7 @@ namespace Phần_Mềm_Dinh_Dưỡng
                    
                     uC_TaoThucDonTheoMau1.Visible = false;
                     uC_TaoThucDonTuMonAn1.Visible = false;
+                    uC_DanhMucNguyenLieu1.Visible = false;
                     btnHDSD.PerformClick();
                 }
      
@@ -56,6 +57,16 @@ namespace Phần_Mềm_Dinh_Dưỡng
        
             
         }
-    
+
+        private void btnNguyenLieu_Click(object sender, EventArgs e)
+        {
+            uC_DanhMucNguyenLieu1.Visible = true;
+            uC_DanhMucNguyenLieu1.BringToFront();
+        }
+
+        private void uC_TaoThucDonTuMonAn1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

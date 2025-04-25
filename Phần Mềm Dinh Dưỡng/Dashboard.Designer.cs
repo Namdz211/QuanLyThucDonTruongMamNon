@@ -40,10 +40,11 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_TaoThucDonTuMonAn1 = new Phần_Mềm_Dinh_Dưỡng.user_control.UC_TaoThucDonTuMonAn();
+            this.uC_DanhMucNguyenLieu1 = new Phần_Mềm_Dinh_Dưỡng.user_control.UC_DanhMucNguyenLieu();
             this.uC_TaoThucDonTheoMau1 = new Phần_Mềm_Dinh_Dưỡng.All_User_Control.UC_TaoThucDonTheoMau();
             this.PanelMinisize = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
+            this.uC_TaoThucDonTuMonAn1 = new Phần_Mềm_Dinh_Dưỡng.user_control.UC_TaoThucDonTuMonAn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -146,6 +147,7 @@
             this.btnNguyenLieu.Size = new System.Drawing.Size(250, 50);
             this.btnNguyenLieu.TabIndex = 5;
             this.btnNguyenLieu.Text = "DANH MỤC NGUYÊN LIỆU";
+            this.btnNguyenLieu.Click += new System.EventHandler(this.btnNguyenLieu_Click);
             // 
             // panel1
             // 
@@ -170,30 +172,37 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.uC_TaoThucDonTuMonAn1);
+            this.panel2.Controls.Add(this.uC_DanhMucNguyenLieu1);
             this.panel2.Controls.Add(this.uC_TaoThucDonTheoMau1);
             this.panel2.ForeColor = System.Drawing.Color.Red;
-            this.panel2.Location = new System.Drawing.Point(28, 138);
+            this.panel2.Location = new System.Drawing.Point(28, 165);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1882, 852);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // uC_TaoThucDonTuMonAn1
+            // uC_DanhMucNguyenLieu1
             // 
-            this.uC_TaoThucDonTuMonAn1.Location = new System.Drawing.Point(-2, -2);
-            this.uC_TaoThucDonTuMonAn1.Name = "uC_TaoThucDonTuMonAn1";
-            this.uC_TaoThucDonTuMonAn1.Size = new System.Drawing.Size(1882, 852);
-            this.uC_TaoThucDonTuMonAn1.TabIndex = 2;
+            this.uC_DanhMucNguyenLieu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.uC_DanhMucNguyenLieu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_DanhMucNguyenLieu1.Location = new System.Drawing.Point(0, 0);
+            this.uC_DanhMucNguyenLieu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_DanhMucNguyenLieu1.Name = "uC_DanhMucNguyenLieu1";
+            this.uC_DanhMucNguyenLieu1.Size = new System.Drawing.Size(1878, 848);
+            this.uC_DanhMucNguyenLieu1.TabIndex = 1;
             // 
             // uC_TaoThucDonTheoMau1
             // 
-            this.uC_TaoThucDonTheoMau1.Location = new System.Drawing.Point(-22, -30);
+            this.uC_TaoThucDonTheoMau1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_TaoThucDonTheoMau1.Location = new System.Drawing.Point(0, 0);
             this.uC_TaoThucDonTheoMau1.Name = "uC_TaoThucDonTheoMau1";
-            this.uC_TaoThucDonTheoMau1.Size = new System.Drawing.Size(1923, 908);
-            this.uC_TaoThucDonTheoMau1.TabIndex = 1;
+            this.uC_TaoThucDonTheoMau1.Size = new System.Drawing.Size(1878, 848);
+            this.uC_TaoThucDonTheoMau1.TabIndex = 0;
             // 
             // PanelMinisize
             // 
@@ -227,6 +236,13 @@
             this.btnExit.Size = new System.Drawing.Size(37, 36);
             this.btnExit.TabIndex = 0;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // uC_TaoThucDonTuMonAn1
+            // 
+            this.uC_TaoThucDonTuMonAn1.Location = new System.Drawing.Point(-2, -2);
+            this.uC_TaoThucDonTuMonAn1.Name = "uC_TaoThucDonTuMonAn1";
+            this.uC_TaoThucDonTuMonAn1.Size = new System.Drawing.Size(1882, 852);
+            this.uC_TaoThucDonTuMonAn1.TabIndex = 2;
             // 
             // Dashboard
             // 
@@ -264,6 +280,7 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel2;
+        private user_control.UC_DanhMucNguyenLieu uC_DanhMucNguyenLieu1;
         private All_User_Control.UC_TaoThucDonTheoMau uC_TaoThucDonTheoMau1;
         private user_control.UC_TaoThucDonTuMonAn uC_TaoThucDonTuMonAn1;
     }
